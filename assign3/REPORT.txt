@@ -1,0 +1,99 @@
+I did implement part3, I believe it is correct because instead of hardcoding
+the numbers in the operations I got them from input.
+
+All of these formulas were from Dr.Korkmaz's slides.
+For Example - Physical Frame # = Bytes in Physical Memory / How big each frame is.
+
+The same follows with Virtual Page # and Offset which was a little tricky
+
+# of offset bits is gotten by taking the floor of log(page_size)/log(2). Log(2) is needed
+to handle pesky rounding errors.
+
+(1)
+
+Lauro Perez - Medium
+
+Lauro and I discussed pros/cons of different structures for implementing the LRU and received some help from Dr. Korkmaz
+
+(2) and (3) 
+
+I believe everything works correctly..
+
+(4)
+
+Most of the challanges were with figuring out how to do part1. Part2 was easy but I did need Dr. Korkmaz to assist a little because of the LRU policy.
+
+(5) Testing part3 with part1testsequence and valgrind
+
+
+ceabc02825a5b908e474b053074ab53c  output-part1test
+c95b27848ae8d4354d87678d075001f7  output-part2test
+c95b27848ae8d4354d87678d075001f7  output-part3test
+
+kkw293@fox03>make
+make: Nothing to be done for `all'.
+kkw293@fox03>valgrind part3 128 4096 1024 part1testsequence
+==3596== Memcheck, a memory error detector
+==3596== Copyright (C) 2002-2013, and GNU GPL'd, by Julian Seward et al.
+==3596== Using Valgrind-3.10.1 and LibVEX; rerun with -h for copyright info
+==3596== Command: part3 128 4096 1024 part1testsequence
+==3596==
+Virtual Address = 0x44
+Page = 0
+Frame = 1
+Offset = 44
+Physical Address = 0xc4
+
+Virtual Address = 0x224
+Page = 4
+Frame = 2
+Offset = 24
+Physical Address = 0x124
+
+Virtual Address = 0x168
+Page = 2
+Frame = 3
+Offset = 68
+Physical Address = 0x1e8
+
+Virtual Address = 0x28c
+Page = 5
+Frame = 4
+Offset = c
+Physical Address = 0x20c
+
+Virtual Address = 0xdc
+Page = 1
+Frame = 5
+Offset = 5c
+Physical Address = 0x2dc
+
+Virtual Address = 0x234
+Page = 4
+Frame = 2
+Offset = 34
+Physical Address = 0x134
+
+Virtual Address = 0x98
+Page = 1
+Frame = 5
+Offset = 18
+Physical Address = 0x298
+
+Virtual Address = 0xd0
+Page = 1
+Frame = 5
+Offset = 50
+Physical Address = 0x2d0
+
+Page Faults: 5
+==3596==
+==3596== HEAP SUMMARY:
+==3596==     in use at exit: 0 bytes in 0 blocks
+==3596==   total heap usage: 42 allocs, 42 frees, 640 bytes allocated
+==3596==
+==3596== All heap blocks were freed -- no leaks are possible
+==3596==
+==3596== For counts of detected and suppressed errors, rerun with: -v
+==3596== ERROR SUMMARY: 0 errors from 0 contexts (suppressed: 0 from 0)
+kkw293@fox03>
