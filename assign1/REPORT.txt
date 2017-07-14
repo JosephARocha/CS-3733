@@ -1,0 +1,24 @@
+1. None
+
+2. Yes
+
+3.
+
+
+4. The challenge was figuring out how to do the zero or more r's.
+I wish a sample output format and the md5 hash was public so we could see if the algoritm works for all inputs.
+
+5.
+PROGRAM OUTPUT
+______________________________________________________________
+kkw293@fox02>cc -o runalla runalla.c pslibrary.c
+kkw293@fox02>runalla
+kkw293@fox02>ls -l fcfsa.all
+-rw-r--r-- 1 kkw293 students 44661315 Jun 12 14:57 fcfsa.all
+kkw293@fox02>wc fcfsa.all
+ 2000001  2000003 44661315 fcfsa.all
+kkw293@fox02>md5sum fcfsa.all
+56160393400814373aef3b4a18245715  fcfsa.all
+kkw293@fox02>
+
+

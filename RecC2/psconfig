@@ -1,0 +1,8 @@
+logdir .
+logfn logfile.html
+imagename gifim
+user Joseph Rocha
+portable true
+quiet
+run myrun
+exp myexp

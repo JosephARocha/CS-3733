@@ -1,0 +1,21 @@
+1.
+Lauro Perez - Small - Gave and Received Help
+Debugging with makefile and linkage
+High level abstraction of assignment instructions
+Basic review of C functions
+
+Jacob Lahav - Small - Gave Help
+Helped with debugging SEG FAULT issue.
+Explained how Dynammic Memory Allocation works in C (Malloc, Realloc, Calloc, Free)
+
+2 and 3.
+In the ReadLineFile it will realloc FOR EACH character that is not a newline ('\n'). 
+This is inneficienct because it takes time to call the system call that realloc is 
+implemented with (sbrk/brk/nmap). It might be more time efficient to double the amount 
+of memory requested each time and only call when the buffer is full and needs more space.
+I left the implementation how I originally designed it because I was not sure what Dr. Korkmaz wanted.
+
+
+4.
+
+

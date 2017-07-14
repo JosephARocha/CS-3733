@@ -1,0 +1,8 @@
+Assignment 1 program was written by Joseph Rocha
+input: 3 5 2 5 4 1 1 
+
+Part 0
+RRRRRwwrrRRRRR
+rrrrrRRRRwrrrrR
+
+2 9 5.0 1.00000

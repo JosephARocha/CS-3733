@@ -1,0 +1,531 @@
+<HEAD>
+<TITLE>Process Scheduling for Joseph Rocha generated Mon Jun 26 22:25:56 CDT 2017</TITLE>
+</HEAD>
+<BODY BGCOLOR=#FFFFFF><H3>Process Scheduling for Joseph Rocha generated Mon Jun 26 22:25:56 CDT 2017</H3>
+
+<H6>Process Scheduling Simulator
+version 1.100L283 by S. Robbins 
+supported by NSF grants 
+DUE-9750953 and DUE-9752165.
+<br>See <a href=http://vip.cs.utsa.edu/nsf>http://vip.cs.utsa.edu/nsf</a> for simulator information.<br><br>
+Java version 1.8.0_101 OS Linux version 4.4.0-75-generic 10292564350
+<br></H6>
+
+<hr>
+
+<b>Configuration File:</b><br>
+logdir .<br>
+logfn logfile.html<br>
+imagename gifim<br>
+user Joseph Rocha<br>
+portable true<br>
+quiet<br>
+run myrun<br>
+exp myexp<br>
+
+<hr>
+
+<b>Number of Run Files: 1</b><br>
+--------------------<br>
+name myrun<br>
+comment This contains two types of processes<br>
+algorithm SJF<br>
+seed 5000<br>
+numprocs 10<br>
+firstarrival 0.0<br>
+interarrival constant 0.0<br>
+duration constant 100.0<br>
+cpuburst uniform 2.0 8.0<br>
+ioburst constant 10.0<br>
+basepriority 1.0<br>
+<br>
+numprocs 10<br>
+firstarrival 0.0<br>
+interarrival constant 0.0<br>
+duration constant 100.0<br>
+cpuburst uniform 30.0 40.0<br>
+ioburst constant 10.0<br>
+basepriority 1.0<br>
+
+<hr>
+
+<b>Number of Experiment Files: 1</b><br>
+--------------------<br>
+name myexp<br>
+comment This experiment contains 2 runs<br>
+run myrun algorithm FCFS key "FCFS"<br>
+run myrun algorithm SJF key "SJF"<br>
+run myrun algorithm RR 1 key "RR 1"<br>
+run myrun algorithm RR 5 key "RR 5"<br>
+run myrun algorithm RR 10 key "RR 10"<br>
+
+<hr>
+
+<center><TABLE Border=1>
+<TR>
+<TD Align=center COLSPAN=5>Experimental Run Information for 1 Run
+</TR>
+<TR><TABLE Border=2>
+<TR COLSPAN=8>
+<TD Align=center COLSPAN=7>
+myrun: &nbsp&nbsp This contains two types of processes &nbsp&nbsp 
+Seed: 0&nbsp&nbsp Algorithm: SJF</TD></TR>
+<TR><TD Align=center>Group</TD>
+<TD Align=center>Processes</TD>
+<TD Align=center>First Arrival</TD>
+<TD Align=center>Interarrival</TD>
+<TD Align=center>Duration</TD>
+<TD Align=center>CPU Burst</TD>
+<TD Align=center>I/O Burst</TD>
+</TR>
+<TR><TD Align=center>1</TD><TD ALign=right>10</TD><TD Align=right>0.0</TD><TD>constant        0.00</TD><TD>constant      100.00</TD><TD>uniform         2.00 8.00</TD><TD>constant       10.00</TD></TR>
+<TR><TD Align=center>2</TD><TD ALign=right>10</TD><TD Align=right>0.0</TD><TD>constant        0.00</TD><TD>constant      100.00</TD><TD>uniform        30.00 40.00</TD><TD>constant       10.00</TD></TR>
+</TABLE></TR>
+</TR></TABLE></center>
+<p><hr><p>
+
+<Center><TABLE Border=1>
+<TR>
+<TD Align=center COLSPAN=4>Experimental Runs For 1 Experiment
+</TR><TR>
+<TD Align=left>Experiment</TD>
+<TD ALign=center>Commentary</TD>
+<TD ALign=center>Run</TD>
+<TD ALign=center>Modifications</TD>
+</TR>
+<TR><TD Align=center>myexp</td>
+<TD Align=left>This experiment contains 2 runs</TD>
+<TD Align=left>myrun_1</TD>
+<TD Align=left>algorithm FCFS</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key FCFS</TD>
+</TR>
+<TR><TD> </td>
+<TD></TD>
+<TD Align=left>myrun_2</TD>
+<TD Align=left>algorithm SJF</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key SJF</TD>
+</TR>
+<TR><TD> </td>
+<TD></TD>
+<TD Align=left>myrun_3</TD>
+<TD Align=left>algorithm RR 1</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key RR 1</TD>
+</TR>
+<TR><TD> </td>
+<TD></TD>
+<TD Align=left>myrun_4</TD>
+<TD Align=left>algorithm RR 5</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key RR 5</TD>
+</TR>
+<TR><TD> </td>
+<TD></TD>
+<TD Align=left>myrun_5</TD>
+<TD Align=left>algorithm RR 10</TD>
+</TR>
+<TR><TD></TD><TD></TD><TD></TD><TD Align=left>key RR 10</TD>
+</TR>
+</TR></TABLE></center>
+
+<hr size=5>
+<H2>Starting experiment of 5 runs from myexp</H2>
+Mon Jun 26 22:26:03 CDT 2017<br>
+Starting run from myrun_1<br>
+Starting to run events using FCFS<br>
+685 events done in 74 milliseconds<br>
+<br>
+Mon Jun 26 22:26:03 CDT 2017<br>
+Starting run from myrun_2<br>
+Starting to run events using SJF<br>
+685 events done in 73 milliseconds<br>
+<br>
+Mon Jun 26 22:26:03 CDT 2017<br>
+Starting run from myrun_3<br>
+Starting to run events using RR 1.00<br>
+4443 events done in 467 milliseconds<br>
+<br>
+Mon Jun 26 22:26:03 CDT 2017<br>
+Starting run from myrun_4<br>
+Starting to run events using RR 5.00<br>
+1265 events done in 148 milliseconds<br>
+<br>
+Mon Jun 26 22:26:03 CDT 2017<br>
+Starting run from myrun_5<br>
+Starting to run events using RR 10.00<br>
+859 events done in 93 milliseconds<br>
+<br>
+<hr size=5>
+<p><hr>
+
+Mon Jun 26 22:26:21 CDT 2017<br>
+<p>
+
+<center><TABLE Border=1>
+<TR>
+<TD COLSPAN=9></TD><TD Align=center COLSPAN=2>Entries</TD><TD align=center COLSPAN=2>Average Time</TD></TR><TR>
+<TD Align=center>Name</TD>
+<TD Align=right>Key</TD>
+<TD Align=right>Time</TD>
+<TD Align=right>Processes</TD>
+<TD Align=right>Finished</TD>
+<TD Align=right>CPU Utilization</TD>
+<TD Align=right>Throughput</TD>
+<TD Align=right>CST</TD>
+<TD Align=right>LA</TD>
+<TD Align=right>CPU</TD>
+<TD Align=right>I/O</TD>
+<TD Align=right>CPU</TD>
+<TD Align=right>I/O</TD>
+</TR>
+
+<TD Align=center>myrun_1</td>
+<TD Align=right>FCFS</TD>
+<TD Align=right>  2012.91</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .99359</TD>
+<TD Align=right>  .009936</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    13.16</TD>
+<TD Align=right>228</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     8.77</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_2</td>
+<TD Align=right>SJF</TD>
+<TD Align=right>  2000.00</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>  1.00000</TD>
+<TD Align=right>  .010000</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    10.43</TD>
+<TD Align=right>228</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     8.77</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_3</td>
+<TD Align=right>RR 1</TD>
+<TD Align=right>  2009.99</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .99503</TD>
+<TD Align=right>  .009950</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    17.15</TD>
+<TD Align=right>2107</TD>
+<TD Align=right>208</TD>
+<TD Align=right>      .95</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_4</td>
+<TD Align=right>RR 5</TD>
+<TD Align=right>  2005.95</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .99703</TD>
+<TD Align=right>  .009970</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    16.35</TD>
+<TD Align=right>518</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     3.86</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_5</td>
+<TD Align=right>RR 10</TD>
+<TD Align=right>  2012.91</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .99359</TD>
+<TD Align=right>  .009936</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    15.55</TD>
+<TD Align=right>315</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     6.35</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_1</td>
+<TD Align=right>FCFS</TD>
+<TD Align=right>  2012.91</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .99359</TD>
+<TD Align=right>  .009936</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    13.16</TD>
+<TD Align=right>228</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     8.77</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_2</td>
+<TD Align=right>SJF</TD>
+<TD Align=right>  2000.00</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>  1.00000</TD>
+<TD Align=right>  .010000</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    10.43</TD>
+<TD Align=right>228</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     8.77</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_3</td>
+<TD Align=right>RR 1</TD>
+<TD Align=right>  2009.99</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .99503</TD>
+<TD Align=right>  .009950</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    17.15</TD>
+<TD Align=right>2107</TD>
+<TD Align=right>208</TD>
+<TD Align=right>      .95</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_4</td>
+<TD Align=right>RR 5</TD>
+<TD Align=right>  2005.95</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .99703</TD>
+<TD Align=right>  .009970</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    16.35</TD>
+<TD Align=right>518</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     3.86</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+<TD Align=center>myrun_5</td>
+<TD Align=right>RR 10</TD>
+<TD Align=right>  2012.91</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>       20</TD>
+<TD Align=right>   .99359</TD>
+<TD Align=right>  .009936</TD>
+<TD Align=right>     0.00</TD>
+<TD Align=right>    15.55</TD>
+<TD Align=right>315</TD>
+<TD Align=right>208</TD>
+<TD Align=right>     6.35</TD>
+<TD Align=right>    10.00</TD>
+</TR>
+
+</TR></TABLE></center>
+<p>
+<br>
+<center><TABLE Border=1>
+<TR>
+<TD Align=center></TD>
+<TD Align=right></TD>
+<TD Align=center COLSPAN=4>Turnaround Time</TD>
+<TD Align=center COLSPAN=4>Waiting Time</TD>
+</TR><TR>
+<TD Align=center>Name</TD>
+<TD Align=right>Key</TD>
+<TD Align=right>Average</TD>
+<TD Align=right>Minimum</TD>
+<TD Align=right>Maximum</TD>
+<TD Align=right>SD</TD>
+<TD Align=right>Average</TD>
+<TD Align=right>Minimum</TD>
+<TD Align=right>Maximum</TD>
+<TD Align=right>SD</TD></TR>
+
+<TD Align=center>myrun_1</td>
+<TD Align=right>FCFS</TD>
+<TD Align=right>  1528.98</TD>
+<TD Align=right>   950.06</TD>
+<TD Align=right>  2012.91</TD>
+<TD Align=right>   443.37</TD>
+<TD Align=right>  1324.98</TD>
+<TD Align=right>   830.06</TD>
+<TD Align=right>  1702.91</TD>
+<TD Align=right>    18.14</TD>
+</TR>
+
+<TD Align=center>myrun_2</td>
+<TD Align=right>SJF</TD>
+<TD Align=right>  1246.93</TD>
+<TD Align=right>   391.54</TD>
+<TD Align=right>  2000.00</TD>
+<TD Align=right>   494.36</TD>
+<TD Align=right>  1042.93</TD>
+<TD Align=right>    81.54</TD>
+<TD Align=right>  1880.00</TD>
+<TD Align=right>    28.47</TD>
+</TR>
+
+<TD Align=center>myrun_3</td>
+<TD Align=right>RR 1</TD>
+<TD Align=right>  1928.06</TD>
+<TD Align=right>  1847.57</TD>
+<TD Align=right>  2009.99</TD>
+<TD Align=right>    64.37</TD>
+<TD Align=right>  1724.06</TD>
+<TD Align=right>  1697.76</TD>
+<TD Align=right>  1754.58</TD>
+<TD Align=right>      .97</TD>
+</TR>
+
+<TD Align=center>myrun_4</td>
+<TD Align=right>RR 5</TD>
+<TD Align=right>  1843.68</TD>
+<TD Align=right>  1627.56</TD>
+<TD Align=right>  2005.95</TD>
+<TD Align=right>   141.89</TD>
+<TD Align=right>  1639.68</TD>
+<TD Align=right>  1507.56</TD>
+<TD Align=right>  1729.57</TD>
+<TD Align=right>     3.17</TD>
+</TR>
+
+<TD Align=center>myrun_5</td>
+<TD Align=right>RR 10</TD>
+<TD Align=right>  1768.55</TD>
+<TD Align=right>  1478.73</TD>
+<TD Align=right>  2012.91</TD>
+<TD Align=right>   203.02</TD>
+<TD Align=right>  1564.55</TD>
+<TD Align=right>  1358.73</TD>
+<TD Align=right>  1702.91</TD>
+<TD Align=right>     6.17</TD>
+</TR>
+
+<TD Align=center>myrun_1</td>
+<TD Align=right>FCFS</TD>
+<TD Align=right>  1528.98</TD>
+<TD Align=right>   950.06</TD>
+<TD Align=right>  2012.91</TD>
+<TD Align=right>   443.37</TD>
+<TD Align=right>  1324.98</TD>
+<TD Align=right>   830.06</TD>
+<TD Align=right>  1702.91</TD>
+<TD Align=right>    18.14</TD>
+</TR>
+
+<TD Align=center>myrun_2</td>
+<TD Align=right>SJF</TD>
+<TD Align=right>  1246.93</TD>
+<TD Align=right>   391.54</TD>
+<TD Align=right>  2000.00</TD>
+<TD Align=right>   494.36</TD>
+<TD Align=right>  1042.93</TD>
+<TD Align=right>    81.54</TD>
+<TD Align=right>  1880.00</TD>
+<TD Align=right>    28.47</TD>
+</TR>
+
+<TD Align=center>myrun_3</td>
+<TD Align=right>RR 1</TD>
+<TD Align=right>  1928.06</TD>
+<TD Align=right>  1847.57</TD>
+<TD Align=right>  2009.99</TD>
+<TD Align=right>    64.37</TD>
+<TD Align=right>  1724.06</TD>
+<TD Align=right>  1697.76</TD>
+<TD Align=right>  1754.58</TD>
+<TD Align=right>      .97</TD>
+</TR>
+
+<TD Align=center>myrun_4</td>
+<TD Align=right>RR 5</TD>
+<TD Align=right>  1843.68</TD>
+<TD Align=right>  1627.56</TD>
+<TD Align=right>  2005.95</TD>
+<TD Align=right>   141.89</TD>
+<TD Align=right>  1639.68</TD>
+<TD Align=right>  1507.56</TD>
+<TD Align=right>  1729.57</TD>
+<TD Align=right>     3.17</TD>
+</TR>
+
+<TD Align=center>myrun_5</td>
+<TD Align=right>RR 10</TD>
+<TD Align=right>  1768.55</TD>
+<TD Align=right>  1478.73</TD>
+<TD Align=right>  2012.91</TD>
+<TD Align=right>   203.02</TD>
+<TD Align=right>  1564.55</TD>
+<TD Align=right>  1358.73</TD>
+<TD Align=right>  1702.91</TD>
+<TD Align=right>     6.17</TD>
+</TR>
+
+</TR></TABLE></center>
+<hr>
+<br>
+<br>
+<hr>
+
+Mon Jun 26 22:27:57 CDT 2017<br>
+<br>
+<center>
+<IMG SRC=gifim01.gif><br>
+Gantt Chart for FCFS<br>
+</center>
+
+<br>
+<hr>
+
+Mon Jun 26 22:28:15 CDT 2017<br>
+<br>
+<center>
+<IMG SRC=gifim02.gif><br>
+Gantt Chart for SJF<br>
+</center>
+
+<br>
+<hr>
+
+Mon Jun 26 22:28:24 CDT 2017<br>
+<br>
+<center>
+<IMG SRC=gifim03.gif><br>
+Gantt Chart for RR 1<br>
+</center>
+
+<br>
+<hr>
+
+Mon Jun 26 22:28:33 CDT 2017<br>
+<br>
+<center>
+<IMG SRC=gifim04.gif><br>
+Gantt Chart for RR 5<br>
+</center>
+
+<br>
+<hr>
+
+Mon Jun 26 22:28:41 CDT 2017<br>
+<br>
+<center>
+<IMG SRC=gifim05.gif><br>
+Gantt Chart for RR 10<br>
+</center>
+
+<hr>
+<p>SJF has the best average waiting time at 1042.93. As the quantum increases RR becomes more like FCFS. By the time our quantum is at 40, RR mostly behaves the same a FCFS</p>
+<H2>Process Scheduling for Joseph Rocha completed Mon Jun 26 22:30:45 CDT 2017</H2>
+<hr>
